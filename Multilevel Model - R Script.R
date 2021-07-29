@@ -1,10 +1,12 @@
 # First, let's download the packages we will need for the workshop (you won't need to do this every time you load R).
 install.packages("lme4")
 install.packages("curl")
+install.packages("Rcpp")
 
 # Then, we'll load them into R Studio so we can use them.
 library(lme4)
 library(curl)
+library(Rcpp)
 
 # Next, we need to load our data from Github.
 data<-read.csv(curl("https://raw.githubusercontent.com/chrisrobus/PsyPAG-Multilevel-Modelling-Workshop/main/Multilevel%20Modelling%20-%20Workshop%20Data.csv"))
