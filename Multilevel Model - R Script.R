@@ -1,15 +1,14 @@
 # First, let's download the packages we will need for the workshop (you won't need to do this every time you load R).
 install.packages("lme4")
-install.packages("RCurl")
+install.packages("curl")
 
 # Then, we'll load them into R Studio so we can use them.
 library(lme4)
-library(RCurl)
+library(curl)
 
 # Next, we need to load our data from Github.
-data<-getURL("https://raw.githubusercontent.com/chrisrobus/PsyPAG-Multilevel-Modelling-Workshop/main/Multilevel%20Modelling%20-%20Workshop%20Data.csv")
-data<-read.csv(text=data)
-subj<-data$ï..subj
+data<-read.csv(curl("https://raw.githubusercontent.com/chrisrobus/PsyPAG-Multilevel-Modelling-Workshop/main/Multilevel%20Modelling%20-%20Workshop%20Data.csv"))
+subj<-data$X.U.FEFF.subj
 
 
                           ### Example 1: Mixed-model with one RM fixed factor ###
